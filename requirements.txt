@@ -1,0 +1,3 @@
+redis
+#rtmbot
+-e git+git://github.com/awentzonline/python-rtmbot.git@my-sweet-patches#egg=rtmbot

@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  bot:
+    build: .
+    command: bash -c 'cd /opt/app && hoagtheebot -c basic.conf'
+    deploy:
+      restart_policy:
+        condition: on-failure
+    environment:
+      SLACK_TOKEN: "${HOAGTHEE_SLACK_TOKEN}"
+      PYTHONUNBUFFERED: "1"
+    volumes:
+      - .:/opt/app
+    links:
+      - redis
+
+  redis:
+    image: redis

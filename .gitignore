@@ -1,0 +1,12 @@
+*.pyc
+*.egg-info
+__pycache__
+*.h5
+*.jpg
+*.png
+*.swp
+samples
+.DS_Store
+build
+dist
+venv
